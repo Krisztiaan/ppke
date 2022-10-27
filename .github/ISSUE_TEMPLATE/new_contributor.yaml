@@ -1,0 +1,43 @@
+name: Szerkesztői hozzáférés
+description: Engedélykérés szerkesztőként hozzáféréshez
+title: "Szerkesztő engedélykérés"
+labels: ["collaborator"]
+assignees:
+  - krisztiaan
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Köszönöm, hogy jelentkezel! Kérlek ha lehet adj meg pár dolgot magadról.
+  - type: input
+    id: contact
+    attributes:
+      label: Elérhetőséged
+      description: Hol vagy elérhető? (Discord, Telegram, stb. felhasználónév, email cím)
+      placeholder: "pl. email@example.com, vagy Discord: Krisztiaan#4332"
+    validations:
+      required: false
+  - type: dropdown
+    id: degree
+    attributes:
+      label: Szak
+      description: Melyik szakra jársz, ha PPKE?
+      options:
+        - molekuláris bionika
+        - mérnök informatika
+    validations:
+      required: true
+  - type: input
+    id: start_year
+    attributes:
+      label: Egyetem kezdés
+      description: Melyik évben kezdted az egyetemet?
+      placeholder: "pl. 2021"
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Nem trollkodok. 🧌
+      description: Az issue elküldésével megígérem, hogy nem trollkodom, és nem fogok semmit csinálni, ami a projektet károsítja, vagy a többi szerkesztőnek fejfájást, problémákat okoz.
+      options:
+        - label: Becsszó!
+          required: true
